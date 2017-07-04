@@ -1,5 +1,10 @@
 // require express and exec
 var app = require('express')();
+const bodyParser  = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 
 // set up 1st level with app.use
 app.use('/api', require('./routes/api'));

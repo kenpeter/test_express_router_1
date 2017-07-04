@@ -4,6 +4,8 @@ var router = require('express').Router();
 // set up 2nd level with router.use
 // api/products
 // api/cat
+
+router.use('/auth', require('./auth'));
 router.use('/products', require('./products'));
 router.use('/categories', require('./categories'));
 
